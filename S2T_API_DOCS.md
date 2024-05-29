@@ -2,6 +2,22 @@
 
 This document provides detailed information about the Speech-to-Text (S2T) API, including the available endpoints, request/response formats, and error codes. The API is currently designed to transcribe spoken words from audio files into text using the Deepgram Nova-2 model. This documenatation is only temporary and will be hosted on the API server in the future.
 
+## Base URL
+
+The base URL for the API is:
+
+```
+https://medwave.app/api/s2t
+```
+
+All endpoints should be appended to this base URL to access the API services.
+
+## Authentication
+
+The API does not currently require authentication for access. However, it is recommended to use secure connections (HTTPS) when interacting with the API to protect sensitive data. 
+
+In the future, we plan to implement authentication mechanisms to ensure secure access to the API services.
+
 ## API Endpoints
 Currently, the API supports the following endpoints:
 
