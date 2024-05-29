@@ -4,3 +4,4 @@ Documentation for APIs hosted by MedWave for our partners. This is only a tempor
 ## Current APIs
 
 - [Speech-to-Text API Documentation](S2T_API_DOCS.md)
+- [SumMe API Documentation](SUMME_API_DOCS.md)
