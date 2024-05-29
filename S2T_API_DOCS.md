@@ -104,6 +104,19 @@ It will look something like this:
 curl -X POST -F "audio_data=@path_to_your_audio_file.wav" https://medwave.app/api/s2t/transcribe_deepgram
 ```
 
+#### Example Python Script:
+
+```python
+import requests
+
+url = "https://medwave.app/api/s2t/transcribe_deepgram"
+
+files = {'audio_data': open('path_to_your_audio_file.wav', 'rb')}
+response = requests.post(url, files=files)
+
+print(response.json())
+```
+
 #### Possible Error Codes:
 
 - `400`: Bad Request - The server cannot or will not process the request due to an apparent client error. This usually happens when the request is missing required parameters or headers. Check the request and try again.
