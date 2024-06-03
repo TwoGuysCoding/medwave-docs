@@ -7,7 +7,7 @@ This document provides detailed information about the Speech-to-Text (S2T) API, 
 The base URL for the API is:
 
 ```
-https://medwave.app/api/s2t
+https://medwave.app/api/kid/s2t
 ```
 
 All endpoints should be appended to this base URL to access the API services.
@@ -53,7 +53,7 @@ It will look something like this:
 #### Example CURL Request:
 
 ```bash
-curl -X GET https://medwave.app/api/s2t/ping
+curl -X GET https://medwave.app/api/kid/s2t/ping
 ```
 
 #### Possible Error Codes:
@@ -62,7 +62,7 @@ curl -X GET https://medwave.app/api/s2t/ping
 - `405`: Method Not Allowed - The method used in the request is not supported for the endpoint. Check the method and try again. This shows usually only if you accidentaly use a POST request instead of a GET request.
 - `500`: Internal Server Error - The server encountered an unexpected condition that prevented it from fulfilling the request. If this shows, contact us immediately.
 
-### `/transcribe_deepgram` - Audio Transcription Service
+### `/transcribe_poc` - Audio Transcription Service
 
 This endpoint leverages the power of the Deepgram Nova-2 model to transcribe spoken words from audio files into text. It's designed to handle audio data seamlessly, providing a robust transcription service that supports various languages.
 
@@ -101,7 +101,7 @@ It will look something like this:
 #### Example CURL Request:
 
 ```bash
-curl -X POST -F "audio_data=@path_to_your_audio_file.wav" https://medwave.app/api/s2t/transcribe_deepgram
+curl -X POST -F "audio_data=@path_to_your_audio_file.wav" https://medwave.app/api/kid/s2t/transcribe_poc
 ```
 
 #### Example Python Script:
@@ -109,7 +109,7 @@ curl -X POST -F "audio_data=@path_to_your_audio_file.wav" https://medwave.app/ap
 ```python
 import requests
 
-url = "https://medwave.app/api/s2t/transcribe_deepgram"
+url = "https://medwave.app/api/kid/s2t/transcribe_poc"
 
 files = {'audio_data': open('path_to_your_audio_file.wav', 'rb')}
 response = requests.post(url, files=files)
